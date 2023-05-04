@@ -18,7 +18,7 @@ public class Task2 {
         line = line.replace("\n", "");
         line = line.replaceAll("\\p{Punct}", "");
         String[] nameArr = line.split(" ");
-        TreeMap<Integer, List<String>> treeMap = new TreeMap<>();
+        TreeMap<Integer, List<String>> treeMap = new TreeMap<>(Comparator.reverseOrder());
         Map<String, Integer> hashMap = new HashMap<>();
 
         for (int i = 0; i < nameArr.length; i += 2) {
